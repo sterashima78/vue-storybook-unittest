@@ -2,6 +2,8 @@
 
 StoryBookを使ってUIの試験をするやつ
 
+Qiita: https://qiita.com/sterashima78/items/8db32368289e4859480b
+
 ## Project setup
 ```
 npm install

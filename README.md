@@ -1,5 +1,7 @@
 # vue-storybook-unittest
 
+StoryBookを使ってUIの試験をするやつ
+
 ## Project setup
 ```
 npm install
@@ -25,5 +27,17 @@ npm run test:unit
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### storybookのsnapshottest
+
+```
+npm run test:unit:dom
+```
+
+coverage-snapshotにカバレッジレポートが出る
+
+### storybookのvisual regression test
+
+```
+npm run test:unit:image
+```
+

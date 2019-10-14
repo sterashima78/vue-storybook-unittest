@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button with JSX 1`] = `
+<button
+  class="button"
+>
+  With JSX
+</button>
+`;
+
+exports[`Storyshots Button with some emoji 1`] = `
+<button
+  class="button"
+>
+  😀 😎 👍 💯
+</button>
+`;
+
+exports[`Storyshots Button with text 1`] = `
+<button
+  class="button is-primary"
+>
+  Hello Button
+</button>
+`;

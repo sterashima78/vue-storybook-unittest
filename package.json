@@ -6,14 +6,27 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "test:storybook:dom": "vue-cli-service test:unit src/stories/__tests__/dom.test.ts --coverage --coverageDirectory=coverage-snapshot",
+    "test:storybook:image": "vue-cli-service test:unit src/stories/__tests__/image.test.ts",
+    "pretest:storybook:image": "npm run storybook:build",
+    "lint": "vue-cli-service lint",
+    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
+    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
   },
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^4.1.0 || ^5.0.0",
+    "@storybook/addon-knobs": "^4.1.0 || ^5.0.0",
+    "@storybook/addon-links": "^4.1.0 || ^5.0.0",
+    "@storybook/addon-notes": "^4.1.0 || ^5.0.0",
+    "@storybook/addon-storyshots": "^5.2.4",
+    "@storybook/addon-storyshots-puppeteer": "^5.2.4",
     "@types/jest": "^23.1.4",
+    "@types/storybook__addon-storyshots": "^5.1.1",
+    "@types/storybook__addon-storyshots-puppeteer": "^5.1.0",
     "@vue/cli-plugin-babel": "^3.12.0",
     "@vue/cli-plugin-eslint": "^3.12.0",
     "@vue/cli-plugin-typescript": "^3.12.0",
@@ -24,6 +37,7 @@
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -33,6 +47,7 @@
     "sass-loader": "^8.0.0",
     "ts-jest": "^23.0.0",
     "typescript": "^3.4.3",
+    "vue-cli-plugin-storybook": "^0.6.1",
     "vue-template-compiler": "^2.6.10"
   },
   "gitHooks": {

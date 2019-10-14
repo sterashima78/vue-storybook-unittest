@@ -4,6 +4,7 @@ module.exports = {
     "^.+\\.vue$": "vue-jest",
     ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$":
       "jest-transform-stub",
+    "^.+\\.(js|jsx)?$": "babel-jest",
     "^.+\\.tsx?$": "ts-jest"
   },
   transformIgnorePatterns: ["/node_modules/"],
@@ -19,9 +20,11 @@ module.exports = {
     "jest-watch-typeahead/filename",
     "jest-watch-typeahead/testname"
   ],
+  setupFiles: ["./tests/setup.js"],
   globals: {
     "ts-jest": {
       babelConfig: true
     }
-  }
+  },
+  collectCoverageFrom: ["src/**/*.{ts,vue}"]
 };
